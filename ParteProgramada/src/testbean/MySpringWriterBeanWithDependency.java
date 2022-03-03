@@ -10,10 +10,13 @@ public class MySpringWriterBeanWithDependency {
         this.encripta = pencripta;
     }
     public void run(){
-        String s = "Sample string";
+        String s = "Texto de prueba";
         System.out.println("Frase de encriptación: "+s);
-        System.out.println("Encriptación: "+encripta.encripta(s));
-        System.out.println("Desencriptación: "+encripta.desencripta(s));
-        System.out.println("Encriptado usado: Cesar");
+
+        String fraseEncriptada = encripta.encripta(s);
+        System.out.println("Encriptación: "+fraseEncriptada);
+        String fraseDesecrinptada = encripta.desencripta(fraseEncriptada);
+        System.out.println("Desencriptación: "+fraseDesecrinptada);
+        System.out.println("Encriptado usado: Vignere");
     }
 }
